@@ -1,10 +1,12 @@
-import Home from './pages/Home.tsx'
+import Nav from './components/Nav.tsx';
+import Navrouter from './router/Navrouter.tsx'
 function App() {
 
 
   return (
     <>
-      <Home />
+      <Nav />
+      <Navrouter />
     </>
   )
 }
