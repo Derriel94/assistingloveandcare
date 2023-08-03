@@ -36,6 +36,13 @@ const Nav = () => {
       		animate={{x: 0}}
       		exit={{x: -90}}
       		transition={{delay: .5, duration: .5}}>
+					<NavLink  id="NavLink"to="/aboutus">About Us</NavLink>
+				</motion.div>
+				<motion.div
+				  initial={{x:-90}}
+      		animate={{x: 0}}
+      		exit={{x: -90}}
+      		transition={{delay: .7, duration: .5}}>
 					<NavLink  id="NavLink"to="/services">Services</NavLink>
 				</motion.div>
 				<motion.div
@@ -43,7 +50,7 @@ const Nav = () => {
       		animate={{x: 0}}
       		exit={{x: -90}}
       		transition={{delay: .7, duration: .5}}>
-					<NavLink  id="NavLink"to="/content">Reviews</NavLink>
+					<NavLink  id="NavLink"to="/contact">Contact</NavLink>
 				</motion.div>
 			</motion.div>
 			:
@@ -52,10 +59,13 @@ const Nav = () => {
 					<NavLink id="NavLink"to="/">Home</NavLink>
 				</div>
 				<div>
-					<NavLink  id="NavLink"to="/services">Services</NavLink>
+					<NavLink id="NavLink"to="/aboutus">About Us</NavLink>
 				</div>
 				<div>
-					<NavLink id="NavLink"to="/reviews">Reviews</NavLink>
+					<NavLink id="NavLink"to="/services">Services</NavLink>
+				</div>
+				<div>
+					<NavLink id="NavLink"to="/contact">Contact</NavLink>
 				</div>
 			</div>
 			}
