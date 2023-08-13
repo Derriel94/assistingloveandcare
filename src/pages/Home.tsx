@@ -44,6 +44,34 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
+			<h2>Testimonials</h2>
+			<div className="review-section">
+
+				<div className="review">
+				
+					"I met Brittany Through my local laywer. She is a sweet heart.
+					She was so kind and loving to me. She provided medical transportaion
+					for me after I had hip surgery, and wasnt able to drive. She came and
+					took me and was friendly. She made me feel good and not think about
+					the pain I was in. She loves her clients and is very professional. I was
+					in her care for over 6 months and after her care she still would check up
+					on me!" - Caroline Kadom
+					<div><img src="fivestars.png" /></div>
+				</div>
+				
+				<div className="review">
+					
+					"During my father’s final few months, life became harder for 
+					him each day. Despite his many challenges, Brittney was one 
+					of the few things that brought him joy. She was so kind, 
+					thoughtful and generous. She always went the extra mile for 
+					my dad and our family. Her thoughtfulness made our final 
+					journey with my father a joyful and peaceful celebration." - Sally and Jay White	
+					<div><img src="fivestars.png" /></div>
+				</div>
+				
+
+			</div>
 		</div>
 		);
 }
