@@ -69,6 +69,16 @@ body {
   border-radius: 20px;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .6); 
 }
+.service-img {
+  margin-top: 15px;
+  max-height: 350px;
+  margin: 5px;
+  width: 40%;
+  border: 2px solid rgba(106,38,128);
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .6); 
+}
+
 
 .home-top-section {
   display: flex;
@@ -118,6 +128,7 @@ body {
 .review-section {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   position: relative;
 }
 .review {
@@ -138,14 +149,59 @@ body {
     font-size: 1.4rem;
     width: 100px;
   }
+  .service-img {
+    width: 90%;
+  }
 }
 
-
+li {
+  cursor: pointer;
+  box-sizing: border-box;
+}
 
 /*SERVICES COMPONENT*/
 
 .services-top-section {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+.secondcolumn {
+    text-align: center;
+  }
+
+@media (orientation: landscape) {
+  .services-top-section {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .services-top-section div {
+    margin-left: 80px;
+  }
+  .secondcolumn {
+    text-align: center;
+  }
 }
 
+/*Contact COMPONENT*/
+.contact {
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.contactform {
+  display: flex;
+  flex-direction: column;
+}
+
+#email,#name,#message {
+  padding: 5px;
+  margin: 10px;
+}
+.submit {
+  height: 20px;
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}

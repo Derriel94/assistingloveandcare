@@ -1,30 +1,10 @@
+import { useState } from "react";
 
 const Services = () => {
 
-
-	return (
-		<div>
-			<h2 style={{textAlign: "center"}}>Services</h2>
-			<div className="services-top-section">
-				<ul>
-				  <li>24hr Home Care</li>
-				  <li>Personal Care Assistance</li>
-				  <li>Respite Care</li>
-				  <li>Mobility Assistance</li>
-				  <li>Social Care</li>
-				  <li>Palliative Care</li>
-				  <li>Laundry</li>
-				  <li>Meal Prep</li>
-				  <li>Errands</li>
-				  <li>Companionship</li>
-				  <li>Medicine Care</li>
-				  <li>Light HouseKeeping</li>
-				</ul>
-				<div>
-					<h4>24hour Home Care</h4>
-					<img className="home-img" src="./bedside.jpg"/>
-					<p> 
-						In this type of care arrangement, 
+	const [activeCareSelection, setActiveCareSelection] = useState(
+						{name: "24hr Home Care", 
+						desc: `In this type of Care arrangement, 
 						our caregiver stays with the individual 
 						around the clock, ensuring their safety, 
 						well-being, and comfort at all times. 
@@ -42,13 +22,126 @@ const Services = () => {
 						while receiving the necessary support for their specific needs. 
 						It is an excellent alternative to assisted living facilities 
 						or nursing homes for those who prefer to stay in 
-						their homes but require ongoing care and supervision.
+						their homes but require ongoing care and supervision.`, 
+						img: "./hands.jpg"})
+
+	const Carelist = [{name: "24hr Home Care", 
+						desc: `In this type of Care arrangement, 
+						our caregiver stays with the individual 
+						around the clock, ensuring their safety, 
+						well-being, and comfort at all times. 
+						The caregiver is available 24 hours a day, 
+						seven days a week(depending on arrangement), 
+						providing personalized care and 
+						assistance with daily activities, 
+						medical needs, mobility, meal preparation, 
+						medication management, and emotional support.
+						This level of care is often required for individuals 
+						who need constant monitoring due to age-related issues, 
+						chronic illnesses, disabilities, or post-surgery recovery. 
+						24-hour home care allows the person to remain in familiar 
+						surroundings, preserving their independence and dignity 
+						while receiving the necessary support for their specific needs. 
+						It is an excellent alternative to assisted living facilities 
+						or nursing homes for those who prefer to stay in 
+						their homes but require ongoing care and supervision.`, 
+						img: "./hands.jpg"},
+			{name: "Personal Care Assistance",
+			 desc: `Our caregivers offer supportive services aimed at 
+			 helping individuals with various daily activities and tasks they 
+			 may struggle with due to physical or cognitive limitations. 
+			 The goal is to enhance the person's quality of life, promote 
+			 independence, and ensure their well-being while allowing them to 
+			 remain in the comfort of their own home. `,
+			 img: `./bedside.jpg`},
+			 {name: "Respite Care",
+			 desc: `Respite care is a vital support service designed to provide 
+			 temporary relief to family caregivers who are caring for a loved one 
+			 with chronic illness, disability, or other special needs. Caregiving
+			  can be physically and emotionally demanding, and respite care offers
+			   caregivers a temporary break from their caregiving responsibilities,
+			    allowing them to rest, recharge, and attend to their own needs.`,
+			 img: `./bedside.jpg`},
+		];
+
+		const careselctionSwitch = (id) => {
+			console.log(Carelist[0])
+			switch(id) {
+				case 0:
+					setActiveCareSelection(Carelist[0])
+					break;
+				case 1:
+					setActiveCareSelection(Carelist[1])
+					break;
+				case 2:
+					setActiveCareSelection(Carelist[2])
+					break;
+				case 3:
+					setActiveCareSelection(Carelist[3])
+					break;
+				case 4:
+					setActiveCareSelection(Carelist[4])
+					break;
+				case 5:
+					setActiveCareSelection(Carelist[5])
+					break;
+				case 6:
+					setActiveCareSelection(Carelist[6])
+					break;
+				case 7:
+					setActiveCareSelection(Carelist[7])
+					break;
+				case 8:
+					setActiveCareSelection(Carelist[8])
+					break;
+				case 9:
+					setActiveCareSelection(Carelist[9])
+					break;
+				case 10:
+					setActiveCareSelection(Carelist[10])
+					break;
+				case 11:
+					setActiveCareSelection(Carelist[11])
+					break;
+
+				default:
+					console.log("switch error")
+					break;
+			}
+				
+		}
+
+		return (
+		<div>
+			<h2 style={{textAlign: "center"}}>Services</h2>
+			<div className="services-top-section">
+				<div>
+					<ul>
+					  <li onClick={()=>{careselctionSwitch(0)}}>24hr Home Care</li>
+					  <li onClick={()=>{careselctionSwitch(1)}}>Personal Care Assistance</li>
+					  <li onClick={()=>{careselctionSwitch(2)}}>Respite Care</li>
+					  <li onClick={()=>{careselctionSwitch(3)}}>Mobility Assistance</li>
+					  <li onClick={()=>{careselctionSwitch(4)}}>Social Care</li>
+					  <li onClick={()=>{careselctionSwitch(5)}}>Palliative Care</li>
+					  <li onClick={()=>{careselctionSwitch(6)}}>Laundry</li>
+					  <li onClick={()=>{careselctionSwitch(7)}}>Meal Prep</li>
+					  <li onClick={()=>{careselctionSwitch(8)}}>Errands</li>
+					  <li onClick={()=>{careselctionSwitch(9)}}>Companionship</li>
+					  <li onClick={()=>{careselctionSwitch(10)}}>Medicine Care</li>
+					  <li onClick={()=>{careselctionSwitch(11)}}>Light HouseKeeping</li>
+					</ul>
+				</div>
+				<div className="secondcolumn">
+					<h4>{activeCareSelection.name}</h4>
+					<img className="service-img" src={activeCareSelection.img}/>
+					<p> 
+						{activeCareSelection.desc}
 					</p>	
 				</div>
 			</div>
 			<div>
 				<h2>Testimonial</h2>
-				<p>	Britteny is a wonderful care giver who goes above and beyond.  
+				<p>	Brittany is a wonderful care giver who goes above and beyond.  
 					I took care of my father at night and Brittny came at 4 am so 
 					I could be at work on time.  I also worked very long hours I 
 					would leave at 0400, and usually not get back to relieve her 
