@@ -38,13 +38,17 @@ const Contact = () => {
 			<div style={{textAlign: "center"}}>
 				<h2>Contact Us</h2>
 			</div>
+			<img src='brit.png' alt="caregiver" />
 			<form style={{display: "flex", flexDirection:"column"}}onSubmit={handleSubmit} ref={form}>
+
 					<div  className="contactform">
+						<img src='./healthy.png' alt="caregiver" />
 						<div className="contactname"><div>★</div> Leave A Message <div>★</div></div>
 						<input placeholder={name} name="from_name" type="text" id="name" required className="name"onChange={(e)=>handleNameChange(e)}/>
 						<input placeholder={email} name="from_email" type="email" id="email" required className="email"onChange={(e)=>handleEmailChange(e)}/>
 						<textarea placeholder={message} name="message" id="message" required className="message"onChange={(e)=>handleMessageChange(e)}/>					
 						<input type="submit" value="submit" className="submit" />
+							<img src='./errands.jpg' alt="caregiver" />
 					</div>
 				</form>
       </div>

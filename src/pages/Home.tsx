@@ -4,10 +4,11 @@ const Home = () => {
 
 	return (
 		<div>
-			<h2 style={{textAlign: "center"}}>Assisting Love and Care</h2>
+			<h2 style={{textAlign: "center"}}>Assisting Love and Care LLC</h2>
 			<div className="home-top-section">
 				<div>
 					<p>24/7 Services Provideing Love & Care</p>
+					<p>Specializing in Senior Care</p>
 					<p>Owned and Operated By: Brittany Nunn</p>
 				</div>
 				<img className="home-img" src="./hands.jpg"/>
@@ -27,7 +28,10 @@ const Home = () => {
 					<h3>Compassion and Love</h3>
 					<h3>Service Area: Central Texas</h3>
 				</div>
-				<img className="home-img" src="./bedside.jpg"/>
+				<div className="sidebysideimage">
+					<img className="home-img" src="./bedside.jpg"/>
+					<img className="home-img" src="./servicearea.PNG"/>
+				</div>
 				<h3 style={{textAlign: "center"}}>Why Choose Home Care?</h3>
 				<div className="home-service-box-container">
 					<div className="home-service-box">
